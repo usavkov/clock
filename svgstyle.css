@@ -1,0 +1,18 @@
+.cf-border {
+    stroke: white;
+}
+
+.cf-digit {
+    fill: black;
+}
+
+.hand {
+    fill: black;
+    transition: all .25s;
+    transform-origin: 50%;
+    transition-timing-function: cubic-bezier(0, 1.54, 0.32, 1.09);
+}
+
+.dot-hand {
+    fill: black;
+}

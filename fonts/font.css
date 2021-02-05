@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'Tuesday Night';
+  src: url('TuesdayNight-Regular.eot');
+  src: url('TuesdayNight-Regular.eot?#iefix') format('embedded-opentype'),
+       url('TuesdayNight-Regular.svg#TuesdayNight-Regular') format('svg'),
+       url('TuesdayNight-Regular.ttf') format('truetype'),
+       url('TuesdayNight-Regular.woff') format('woff'),
+       url('TuesdayNight-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
