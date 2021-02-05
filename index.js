@@ -15,7 +15,12 @@ watchesLoaded.then((svg) => {
         const curDate = new Date();
         
         const curHours = curDate.getHours() > 12 ? curDate.getHours() - 12 : curDate.getHours();
-        const hDeg = curHours / 12 * 360;
+        const curMinutes = curDate.getMinutes();
+        const curSeconds = curDate.getSeconds();
+
+        const sDeg = curSeconds / 60 * 360;
+        const mDeg = curMinutes / 60 * 360;
+        const hDeg = (curHours / 12 * 360) + (curMinutes / 12 / 60 * 360);
 
         if (curHours === 0) {
             (function throwSec() {
@@ -26,9 +31,6 @@ watchesLoaded.then((svg) => {
             })()
         }
 
-        const curMinutes = curDate.getMinutes();
-        const mDeg = curMinutes / 60 * 360;
-
         if (curMinutes === 0) {
             (function throwMin() {
                 minHand.style.transitionDuration = '0s';
@@ -37,9 +39,6 @@ watchesLoaded.then((svg) => {
                 })
             })()
         }
-
-        const curSeconds = curDate.getSeconds();
-        const sDeg = curSeconds / 60 * 360;
 
         if (curSeconds === 0) {
             (function throwSec() {
